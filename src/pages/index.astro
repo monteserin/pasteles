@@ -1,11 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import Whatsapp from "../components/Whatsapp.astro";
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
     <div class="container">
+      <h1>Pasteles ricos</h1>
       <div class="row">
         <Card title="Tres leches" src="/assets/img/tres-leches.jpg" />
         <Card title="Lemon Pie" src="/assets/img/lemonpie.jpg" />
@@ -14,6 +16,8 @@ import Card from "../components/Card.astro";
         <Card title="Tarta húmeda de chocolate" src="/assets/img/tarta-humeda-chocolate.jpg" />
 
         <!-- <Card title="Encebollado" src="/assets/img/encebollado.jpg" /> -->
+
+        <Whatsapp />
       </div>
     </div>
   </main>
