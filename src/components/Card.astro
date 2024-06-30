@@ -1,48 +1,24 @@
 ---
 interface Props {
   title: string;
-  src: string;
-  portions: number;
-  price: number;
-  diameter?: number;
+  body: string;
+  href: string;
 }
 
-const { src, title, portions, price, diameter } = Astro.props;
+const { title, src, portions, price } = Astro.props;
 ---
 
-<div class="col-12 col-lg-4 pt-5 pb-5">
+<div class="col-md-4 mb-4">
   <div class="card">
     <img class="card-img-top" src={src} alt="Card image cap" />
     <div class="card-body">
-      <p class="card-title">{title}</p>
       <p class="card-text">
-        <span> <span class="fw-bold">Raciones:</span> {portions}</span>
-        <span> <span class="fw-bold"> Precio:</span> {price}€</span>
-      </p>
-     {diameter && (
-        <p class="card-text">
-          <span> <span class="fw-bold">Diámetro:</span> {diameter} cm</span>
+        <p class="fw-bold text-center">{title}</p>
+        <p class="d-flex justify-content-between">
+          <span style="font-size:1rem">Raciones: {portions}</span>
+          <span style="font-size:1rem">Price: {price}</span>
         </p>
-      )
-      }
-      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+      </p>
     </div>
   </div>
 </div>
-
-<style>
-  .card-text {
-    display: flex;
-    justify-content: space-between;
-    /* font-family: "Dancing Script", cursive; */
-    font-family: "Mali";
-  }
-  .card-text span {
-    font-size: 1rem;
-  }
-  .card-title {
-    font-size: 1.5rem;
-    text-align: center;
-    font-family: "Mali";
-  }
-</style>

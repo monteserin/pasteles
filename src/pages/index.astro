@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Whatsapp from "../components/Whatsapp.astro";
+import BreakfastCustomizer from "../components/BreakfastCustomizer";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -54,6 +55,13 @@ import Whatsapp from "../components/Whatsapp.astro";
         <Card
           title="Rollitos de canela"
           src="/assets/img/cakes/rollitos-canela.jpg"
+          portions={12}
+          price={20}
+        />
+
+        <Card
+          title="Tiramisu"
+          src="/assets/img/cakes/tiramisu.jpg"
           portions={12}
           price={20}
         />
