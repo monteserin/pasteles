@@ -3,22 +3,41 @@ interface Props {
   title: string;
   body: string;
   href: string;
+  children: any;
+  src:string;
 }
 
-const { title, src, portions, price } = Astro.props;
+const { title, src, portions, price, body} = Astro.props;
+
+console.log(Astro.props)
+const drawerId = `drawer-${title.replace(/\s+/g, '-').toLowerCase()}`;
+
 ---
 
-<div class="col-md-4 mb-4">
-  <div class="card">
+<style>
+ .monteserinCake{
+  cursor: pointer;
+ }
+</style>
+
+<div class="col-md-4 mb-4 monteserinCake">
+  <div class="card" data-bs-toggle="offcanvas" data-bs-target={`#${drawerId}`} aria-controls={drawerId}>
     <img class="card-img-top" src={src} alt="Card image cap" />
     <div class="card-body">
       <p class="card-text">
         <p class="fw-bold text-center">{title}</p>
-        <p class="d-flex justify-content-between">
-          <span style="font-size:1rem">Raciones: {portions}</span>
-          <span style="font-size:1rem">Price: {price}</span>
-        </p>
       </p>
     </div>
+  </div>
+</div>
+
+<!-- Drawer -->
+<div class="offcanvas offcanvas-end offcanvas-wide" id={drawerId} tabindex="-1" id="drawer" aria-labelledby="drawerLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="drawerLabel">{title}</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p><slot /></p>
   </div>
 </div>
