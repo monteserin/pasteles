@@ -2,55 +2,72 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Whatsapp from "../components/Whatsapp.astro";
-import BreakfastCustomizer from "../components/BreakfastCustomizer";
 ---
 
 <Layout title="Welcome to Astro.">
   <main>
     <div class="container">
-      <h1 class="pt-3 mb-4 d-flex justify-content-center position-relative">
+      <header>
         <img
-          src="/assets/img/sweet-moni.jpg"
+          src="/assets/img/logo.jpg"
           style="width:80px; left:0; border-radius:100%"
-          class="me-5 position-absolute"
-          style="left:0"
-        />Pasteles <br class="d-md-none" />con amor
-
-        <img
-          src="/assets/img/birthday-cake.png"
-          class="position-absolute d-md-none"
-          style="right:0"
+          class="me-5"
         />
-      </h1>
-
-      <div class="row">
-        <Card client:load
-          title="Tarta de chocolate y dulce de leche"
-          src="/assets/img/cakes2/chocolate.jpg"
-        ><p>Una tarta para los que aman el chocolate y el dulzor extremo, sus capas de bizcocho de chocolate son húmedas y están rellenas de un cremoso dulce de leche que se funde en cada bocado. La cobertura de ganache de chocolate y dulce de leche la convierte en un postre irresistible.</p>
-      <p>Tamaños disponibles:</p>
-      <ul>
-        <li>Pequeño (15-17 cm): 6 a 8 porciones.</li>
-        <li>Mediano (17-19 cm): 8 a 10 porciones.</li>
-        <li>Grande (20-22 cm): 10 a 12 porciones</li>
-      </ul>
-      
-      </Card>
-
-        <Card
-          title="Lemon Pie"
-          src="/assets/img/cakes2/lemon-pie.jpg"
+        <h1
+          class="pt-3 d-flex justify-content-center align-items-center text-center page-title"
         >
-<p>Un clásico refrescante y lleno de sabor cítrico. Esta tarta combina una base crujiente de galleta con una sedosa crema de limón, que tiene el equilibrio perfecto entre lo dulce y lo ácido. Decorada con un ligero merengue suizo, cada bocado es una explosión de frescura. </p>
+          Pasteles <br class="d-md-none" />con amor
+        </h1>
+        <Whatsapp />
+      </header>
 
-<p>Tamaños disponibles:</p>
+      <div class="myrow">
+        <Card
+          title="Tarta de chocolate y dulce de leche"
+          src="/assets/img/cakes3/chocolate.jpg"
+        >
+          <p>
+            Una tarta para los que aman el chocolate y el dulzor extremo, sus
+            capas de bizcocho de chocolate son húmedas y están rellenas de un
+            cremoso dulce de leche que se funde en cada bocado. La cobertura de
+            ganache de chocolate y dulce de leche la convierte en un postre
+            irresistible.
+          </p>
+          <p>Tamaños disponibles:</p>
+          <ul>
+            <li>
+              <span class="fw-bold">Pequeño</span> (15-17 cm): 6 a 8 porciones.
+            </li>
+            <li>
+              <span class="fw-bold">Mediano</span> (17-19 cm): 8 a 10 porciones.
+            </li>
+            <li>
+              <span class="fw-bold">Grande</span> (20-22 cm): 10 a 12 porciones
+            </li>
+          </ul>
+        </Card>
 
-<ul>
-<li>Pequeño (15-17 cm): 6 a 8 porciones.</li>
-<li>Mediano (17-19 cm): 8 a 10 porciones</li>
-<li>Grande (20-22 cm): 10 a 12 porciones</li>
-</ul>
+        <Card title="Lemon Pie" src="/assets/img/cakes3/lemon-pie.jpg">
+          <p>
+            Un clásico refrescante y lleno de sabor cítrico. Esta tarta combina
+            una base crujiente de galleta con una sedosa crema de limón, que
+            tiene el equilibrio perfecto entre lo dulce y lo ácido. Decorada con
+            un ligero merengue suizo, cada bocado es una explosión de frescura.
+          </p>
 
+          <p>Tamaños disponibles:</p>
+
+          <ul>
+            <li>
+              <span class="fw-bold">Pequeño</span> (15-17 cm): 6 a 8 porciones.
+            </li>
+            <li>
+              <span class="fw-bold">Mediano</span> (17-19 cm): 8 a 10 porciones
+            </li>
+            <li>
+              <span class="fw-bold">Grande</span> (20-22 cm): 10 a 12 porciones
+            </li>
+          </ul>
         </Card>
         <!-- <Card
           title="Crema y fresa"
@@ -65,7 +82,7 @@ import BreakfastCustomizer from "../components/BreakfastCustomizer";
           portions={12}
           price={40}
         /> -->
-<!-- 
+        <!-- 
         <Card
           title="Rollitos de canela"
           src="/assets/img/cakes2/lemon-pie.jpg"
@@ -73,102 +90,158 @@ import BreakfastCustomizer from "../components/BreakfastCustomizer";
           price={20}
         /> -->
 
-
-                <Card
-          title="Oreo Cake"
-          src="/assets/img/cakes2/lemon-pie.jpg"
-        >
-<p>Tamaños disponibles:</p>
-<ul>
-<li>Pequeño (15-17 cm): 6 a 8 porciones.</li>
-<li>Mediano (17-19 cm): 8 a 10 porciones.</li>
-<li>Grande (20-22 cm): 10 a 12 porciones.</li>
-</ul>
+        <Card title="Oreo Cake" src="/assets/img/cakes2/lemon-pie.jpg">
+          <p>Tamaños disponibles:</p>
+          <ul>
+            <li>
+              <span class="fw-bold">Pequeño</span> (15-17 cm): 6 a 8 porciones.
+            </li>
+            <li>
+              <span class="fw-bold">Mediano</span> (17-19 cm): 8 a 10 porciones.
+            </li>
+            <li>
+              <span class="fw-bold">Grande</span> (20-22 cm): 10 a 12 porciones.
+            </li>
+          </ul>
         </Card>
 
+        <Card title="Tiramisu" src="/assets/img/cakes2/vainilla.jpg">
+          <p>
+            La famosa tarta italiana que se ha ganado corazones alrededor del
+            mundo. Capas de bizcochos empapados en café, combinados con una rica
+            crema de mascarpone y espolvoreados con cacao. Su textura suave y su
+            mezcla de sabores intensos hacen de este tiramisú un postre
+            sofisticado y perfecto para los amantes del café.
+          </p>
+
+          <p>Tamaños disponibles:</p>
+
+          <ul>
+            <li>
+              <span class="fw-bold">Pequeño</span> (15-17 cm): 6 a 8 porciones.
+            </li>
+            <li>
+              <span class="fw-bold">Mediano</span> (17-19 cm): 8 a 10 porciones.
+            </li>
+            <li>
+              <span class="fw-bold">Grande</span> (20-22 cm): 10 a 12 porciones.
+            </li>
+          </ul>
+        </Card>
+
+        <Card title="Red Velvet" src="/assets/img/cakes3/red-velvet.jpg">
+          <p>
+            Suave y esponjosa, destaca por su color rojo intenso y su
+            característico sabor ligeramente a cacao, combinado con un toque de
+            vainilla, cubierta y rellena de un delicioso frosting de crema de
+            queso, que equilibra perfectamente la dulzura. Es una tarta que no
+            solo llama la atención por su color, sino que también te conquista
+            con cada bocado.
+          </p>
+
+          <p>Tamaños disponibles:</p>
+          <ul>
+            <li>
+              <span class="fw-bold">Pequeño</span> (15-17 cm): 6 a 8 porciones
+            </li>
+            <li>
+              <span class="fw-bold">Mediano</span> (17-19 cm): 8 a 10 porciones
+            </li>
+            <li>
+              <span class="fw-bold">Grande</span> (20-22 cm): 10 a 12 porciones
+            </li>
+          </ul>
+        </Card>
+
+        <Card title="Carrow Cake" src="/assets/img/cakes2/red-velvet.jpg">
+          <p>
+            Una deliciosa tarta de zanahoria, suave y esponjosa, con un toque
+            especiado de canela y nuez moscada. Enriquecida con trocitos de nuez
+            y un irresistible frosting de queso crema, ideal para los amantes de
+            los sabores caseros.
+          </p>
+          <p>Tamaños disponibles:</p>
+          <ul>
+            <li>
+              <span class="fw-bold">Pequeño</span> (15-17 cm): 6 a 8 porciones
+            </li>
+            <li>
+              <span class="fw-bold">Mediano</span> (17-19 cm): 8 a 10 porciones
+            </li>
+            <li>
+              <span class="fw-bold">Grande</span> (20-22 cm): 10 a 12 porciones
+            </li>
+          </ul>
+        </Card>
+
+        <Card title="Brownie" src="/assets/img/cakes2/red-velvet.jpg">
+          <p>
+            Una bomba de chocolate en forma de tarta. Nuestro brownie es denso,
+            húmedo y lleno de sabor, con trocitos de chocolate y nueces que le
+            dan un toque crujiente. Perfecto para los más golosos.
+          </p>
+          <p>Tamaños disponibles:</p>
+
+          <ul>
+            <li>
+              <span class="fw-bold">Pequeño</span> (15-17 cm): 6 a 8 porciones.
+            </li>
+            <li>
+              <span class="fw-bold">Mediano</span> (17-19 cm): 8 a 10 porciones.
+            </li>
+            <li>
+              <span class="fw-bold">Grande</span> (20-22 cm): 10 a 12 porciones.
+            </li>
+          </ul>
+        </Card>
 
         <Card
-          title="Tiramisu"
-          src="/assets/img/cakes2/vainilla.jpg"
-        >
-<p>La famosa tarta italiana que se ha ganado corazones alrededor del mundo. Capas de bizcochos empapados en café, combinados con una rica crema de mascarpone y espolvoreados con cacao. Su textura suave y su mezcla de sabores intensos hacen de este tiramisú un postre sofisticado y perfecto para los amantes del café.</p>
-
-<p>Tamaños disponibles:</p>
-
-<ul>
- <li>Pequeño (15-17 cm): 6 a 8 porciones.</li>
-<li>Mediano (17-19 cm): 8 a 10 porciones.</li>
-<li>Grande (20-22 cm): 10 a 12 porciones.</li>
-</ul>
-
-        </Card>
-
-          <Card
-          title="Red Velvet"
-          src="/assets/img/cakes2/red-velvet.jpg"
-        >
-      <p>Suave y esponjosa, destaca por su color rojo intenso y su característico sabor ligeramente a cacao, combinado con un toque de vainilla, cubierta y rellena de un delicioso frosting  de crema de queso, que equilibra perfectamente la dulzura. Es una tarta que no solo llama la atención por su color, sino que también te conquista con cada bocado. </p>
-
-      <p>Tamaños disponibles:</p>
-      <li>
-        <li>Pequeño (15-17 cm): 6 a 8 porciones</li>
-<li>Mediano (17-19 cm): 8 a 10 porciones</li>
-<li>Grande (20-22 cm): 10 a 12 porciones</li>
-      </ul>
-      </Card>
-
-
-
-       <Card
-          title="Carrow Cake"
-          src="/assets/img/cakes2/red-velvet.jpg"
-        >
-<p>Una deliciosa tarta de zanahoria, suave y esponjosa, con un toque especiado de canela y nuez moscada. Enriquecida con trocitos de nuez y un irresistible frosting de queso crema, ideal para los amantes de los sabores caseros.</p>
-<p>Tamaños disponibles:</p>
-<ul>
-  <li>Pequeño (15-17 cm): 6 a 8 porciones</li>
-  <li>Mediano (17-19 cm): 8 a 10 porciones</li>
-    <li>Grande (20-22 cm): 10 a 12 porciones</li>
-</ul>
-      </Card>
-
-
-      
-
-       <Card
-          title="Brownie"
-          src="/assets/img/cakes2/red-velvet.jpg"
-        >
-<p>Una bomba de chocolate en forma de tarta. Nuestro brownie es denso, húmedo y lleno de sabor, con trocitos de chocolate y nueces que le dan un toque crujiente. Perfecto para los más golosos.</p>
-<p>Tamaños disponibles:</p>
-
-<ul>
-  <li>Pequeño (15-17 cm): 6 a 8 porciones.</li>
-  <li>Mediano (17-19 cm): 8 a 10 porciones.</li>
-  <li>Grande (20-22 cm): 10 a 12 porciones.</li>
-</ul>
-
-      </Card>
-
-       <Card
           title="Cheescake de frutos rojos"
           src="/assets/img/cakes2/red-velvet.jpg"
         >
-<p>Una tarta fresca y cremosa que combina la suavidad del queso con una base crujiente de galleta. Está coronada con una mermelada casera y una  capa de frutos rojos que aportan un toque de acidez y frescura, equilibrando perfectamente la dulzura del queso. Ideal para quienes prefieren algo más ligero y frutal.</p>
-<p>Tamaños disponibles:</p>
+          <p>
+            Una tarta fresca y cremosa que combina la suavidad del queso con una
+            base crujiente de galleta. Está coronada con una mermelada casera y
+            una capa de frutos rojos que aportan un toque de acidez y frescura,
+            equilibrando perfectamente la dulzura del queso. Ideal para quienes
+            prefieren algo más ligero y frutal.
+          </p>
+          <p>Tamaños disponibles:</p>
 
-<ul>
-  <li>Pequeño (15-17 cm): 6 a 8 porciones.</li>
-  <li>Mediano (17-19 cm): 8 a 10 porciones</li>
-  <li>Grande (20-22 cm): 10 a 12 porciones.</li>
-</ul>
-
-      </Card>
+          <ul>
+            <li>
+              <span class="fw-bold">Pequeño</span> (15-17 cm): 6 a 8 porciones.
+            </li>
+            <li>
+              <span class="fw-bold">Mediano</span> (17-19 cm): 8 a 10 porciones
+            </li>
+            <li>
+              <span class="fw-bold">Grande</span> (20-22 cm): 10 a 12 porciones.
+            </li>
+          </ul>
+        </Card>
 
         <!-- <Card title="Encebollado" src="/assets/img/encebollado.jpg" /> -->
-
-        <Whatsapp />
       </div>
     </div>
   </main>
 </Layout>
+
+<style>
+  .page-title {
+    font-size: 5rem;
+    color: #e78493;
+  }
+  .myrow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+</style>

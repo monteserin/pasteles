@@ -1,43 +1,84 @@
 ---
 interface Props {
   title: string;
-  body: string;
-  href: string;
-  children: any;
-  src:string;
+  src: string;
 }
 
-const { title, src, portions, price, body} = Astro.props;
-
-console.log(Astro.props)
-const drawerId = `drawer-${title.replace(/\s+/g, '-').toLowerCase()}`;
-
+const { title, src } = Astro.props;
 ---
 
 <style>
- .monteserinCake{
-  cursor: pointer;
- }
+  .monteserinCake {
+    cursor: pointer;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 100% auto;
+    border-radius: 15px;
+
+    &:hover .description {
+      top: 5%;
+      background-color: rgba(255, 255, 255, 0.9);
+      opacity: 1;
+    }
+
+    &:hover .card-title {
+      opacity: 0;
+    }
+    .description {
+      position: absolute;
+      width: 90%;
+      height: 90%;
+      top: 100%;
+      transition: 0.5s;
+      background-color: transparent;
+      padding: 15px;
+      border-radius: 15px;
+      left: 5%;
+    }
+  }
+  .card-title {
+    font-size: 2.2rem;
+    width: 95%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 7px;
+    display: block;
+    margin: 2% auto;
+    border-radius: 15px;
+    transition: 1.2s;
+  }
+  .card {
+    height: 100%;
+  }
+  .card-title-description {
+    font-family: "Cookie", monospace;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 0;
+  }
+
+  .border {
+    border: 1px solid white !important;
+    width: 95%;
+    height: 95%;
+    border-radius: 15px;
+  }
 </style>
 
-<div class="col-md-4 mb-4 monteserinCake">
-  <div class="card" data-bs-toggle="offcanvas" data-bs-target={`#${drawerId}`} aria-controls={drawerId}>
-    <img class="card-img-top" src={src} alt="Card image cap" />
-    <div class="card-body">
-      <p class="card-text">
-        <p class="fw-bold text-center">{title}</p>
-      </p>
-    </div>
-  </div>
-</div>
+<div
+  class="col-md-4 mb-4 monteserinCake"
+  style={`background-image: url(${src});`}
+>
+  <div class="border">
+    <h3 class="text-center card-title">{title}</h3>
 
-<!-- Drawer -->
-<div class="offcanvas offcanvas-end offcanvas-wide" id={drawerId} tabindex="-1" id="drawer" aria-labelledby="drawerLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="drawerLabel">{title}</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <p><slot /></p>
+    <div class="description">
+      <p class="card-title-description">{title}</p>
+      <slot />
+    </div>
   </div>
 </div>
