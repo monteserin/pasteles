@@ -19,16 +19,18 @@ const { title, src } = Astro.props;
     align-items: center;
     background-size: 100% auto;
     border-radius: 15px;
+    transition: 0.7s;
+    &:hover{
+      transform: scale(1.1);
+    }
 
-    &:hover .description {
+    .description.visible {
       top: 5%;
       background-color: rgba(255, 255, 255, 0.9);
       opacity: 1;
     }
 
-    &:hover .card-title {
-      opacity: 0;
-    }
+
     .description {
       position: absolute;
       width: 90%;
@@ -70,7 +72,7 @@ const { title, src } = Astro.props;
 </style>
 
 <div
-  class="col-md-4 mb-4 monteserinCake"
+  class="col-md-4 mb-4 monteserinCake" 
   style={`background-image: url(${src});`}
 >
   <div class="border">

@@ -94,7 +94,7 @@ import Whatsapp from "../components/Whatsapp.astro";
           </ul>
         </Card-->
 
-        <Card title="Tiramisu" src="/assets/img/cakes2/vainilla.jpg">
+        <!-- <Card title="Tiramisu" src="/assets/img/cakes2/vainilla.jpg">
           <p>
             La famosa tarta italiana que se ha ganado corazones alrededor del
             mundo. Capas de bizcochos empapados en café, combinados con una rica
@@ -104,7 +104,7 @@ import Whatsapp from "../components/Whatsapp.astro";
           </p>
 <p><span class="fw-bold">Precio</span>: 30€ (20cm de diámetro)</p>
         
-        </Card>
+        </Card> -->
 
         <!--Card title="Red Velvet" src="/assets/img/cakes3/red-velvet.jpg">
           <p>
@@ -202,7 +202,7 @@ import Whatsapp from "../components/Whatsapp.astro";
 
         </Card>
 
-          <Card
+          <!-- <Card
           title="Muffings de pistacho"
           src="/assets/img/cookies/muffings-de-pistacho.jpg"
         >
@@ -212,7 +212,7 @@ import Whatsapp from "../components/Whatsapp.astro";
           </p>
          <p><span class="fw-bold">Precio</span>: 15€ (6 cookies)</p>
 
-        </Card>
+        </Card> -->
 
         <!-- <Card title="Encebollado" src="/assets/img/encebollado.jpg" /> -->
       </div>
@@ -228,8 +228,8 @@ import Whatsapp from "../components/Whatsapp.astro";
   .myrow {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: start;
+    gap: 47px;
   }
 
   header {
@@ -238,3 +238,11 @@ import Whatsapp from "../components/Whatsapp.astro";
     align-items: center;
   }
 </style>
+
+<script>
+ document.querySelectorAll('.monteserinCake').forEach(cake => {
+  cake.addEventListener('click', () => {
+cake.querySelector('.description').classList.toggle('visible')
+  });
+ });
+</script>
