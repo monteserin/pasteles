@@ -240,9 +240,16 @@ import Whatsapp from "../components/Whatsapp.astro";
 </style>
 
 <script>
- document.querySelectorAll('.monteserinCake').forEach(cake => {
+  const cakes = document.querySelectorAll('.monteserinCake')
+ cakes.forEach((cake,i1 )=> {
   cake.addEventListener('click', () => {
-cake.querySelector('.description').classList.toggle('visible')
+    cakes.forEach((c,i2) => {
+      if(i1 === i2){
+        c.querySelector('.description').classList.toggle('visible');
+      }else{
+        c.querySelector('.description').classList.remove('visible');
+      }
+    })
   });
  });
 </script>
