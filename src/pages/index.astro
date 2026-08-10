@@ -5,23 +5,11 @@ import Whatsapp from "../components/Whatsapp.astro";
 ---
 
 <Layout title="Welcome to Astro.">
+
   <main>
     <div class="container">
-      <header class="mb-3" style="padding-top:1.2rem">
-        <img
-          src="/assets/img/logo.jpg"
-          style="width:80px; left:0; border-radius:100%"
-          class="me-2"
-        />
-        <h1
-          class="pt-3 d-flex justify-content-center align-items-center text-center page-title"
-        >
-          Pasteles <br class="d-md-none" />con amor
-        </h1>
-        <Whatsapp />
-      </header>
-
-      <div class="myrow">
+      
+      <div class="row">
         <!--Card
           title="Tarta de chocolate y dulce de leche"
           src="/assets/img/cakes3/chocolate.jpg"
@@ -47,15 +35,41 @@ import Whatsapp from "../components/Whatsapp.astro";
           </ul>
         </Card-->
 
-        <Card title="Lemon Pie" src="/assets/img/selected-cakes/lemon-pie.jpg">
-          <p>Esta tarta combina una base crujiente de galleta con una sedosa crema de limón. Decorada con merengue suizo.
+
+        <Card title="Tres leches" src="/assets/img/tratadas/tres-leches.jpg">
+          <p>
           </p>
-          <p><span class="fw-bold">Precio</span>:30€ (24cm de diámetro, 10-12 porciones)</p>
+            <p>Tamaños disponibles:</p>
+          <ul style="">
+            <li>
+              <span class="fw-bold">4 a 6 porciones</span>: 24€
+            </li>
+           
+          </ul>
+
+          <p>Escritura personalizada: +4€</p>
         </Card>
 
-         <Card
+
+        <Card title="Lemon Pie" src="/assets/img/tratadas/lemon-pie.jpg">
+      
+            <p>Tamaños disponibles:</p>
+          <ul >
+            <li>
+              <span class="fw-bold">6 a 8 porciones</span>: 24€
+            </li>
+            <li>
+              <span class="fw-bold">8 a 10 porciones</span>: 28€
+            </li>
+            <li>
+              <span class="fw-bold">12 a 14 porciones</span>: 40€
+            </li>
+          </ul>
+        </Card>
+
+         <!-- <Card
           title="Tiramisú"
-          src="/assets/img/selected-cakes/tiramisu-optimizado.jpg"
+          src="/assets/img/tratadas/tiramisu-optimizado.jpg"
         >
           <p>
             El famoso postre italiano que combina capas de bizcochos empapados en café con una rica crema de mascarpone.
@@ -65,43 +79,9 @@ import Whatsapp from "../components/Whatsapp.astro";
             <li>40€ (20cm de diámetro, 10-12 porciones)</li>
             <li>48€ (23cm de diámetro, 12-15 porciones)</li>
           </ul>
-        </Card>
-        <!-- <Card
-          title="Crema y fresa"
-          src="/assets/img/cakes2/red-velvet.jpg"
-          portions={8}
-          diameter={21}
-          price={25}
-        /> -->
-        <!-- <Card
-          title="Tres leches"
-          src="/assets/img/cakes2/vainilla.jpg"
-          portions={12}
-          price={40}
-        /> -->
-        <!-- 
-        <Card
-          title="Rollitos de canela"
-          src="/assets/img/cakes2/lemon-pie.jpg"
-          portions={12}
-          price={20}
-        /> -->
-
-        <!--Card title="Oreo Cake" src="/assets/img/cakes2/lemon-pie.jpg">
-          <p>Tamaño: 20-22cm.</p>
-          <p></p>
-          <ul>
-            <li>
-              <span class="fw-bold">Pequeño</span> (15-17 cm): 6 a 8 porciones.
-            </li>
-            <li>
-              <span class="fw-bold">Mediano</span> (17-19 cm): 8 a 10 porciones.
-            </li>
-            <li>
-              <span class="fw-bold">Grande</span> (20-22 cm): 10 a 12 porciones.
-            </li>
-          </ul>
-        </Card-->
+        </Card> -->
+ 
+       
 
         <!-- <Card title="Tiramisu" src="/assets/img/cakes2/vainilla.jpg">
           <p>
@@ -115,15 +95,32 @@ import Whatsapp from "../components/Whatsapp.astro";
         
         </Card> -->
 
-        <!--Card title="Red Velvet" src="/assets/img/cakes3/red-velvet.jpg">
+        <Card title="Red Velvet" src="/assets/img/tratadas/red-velvet.jpg">
+ 
+
+          <p>Tamaños disponibles:</p>
+          <ul>
+            <li>
+              <span class="fw-bold">8 a 10 porciones</span>: 40€
+            </li>
+            <li>
+              <span class="fw-bold">12 a 15 porciones</span>: 52€
+            </li>
+            <li>
+              <span class="fw-bold">20 a 25 porciones</span>: 70€
+            </li>
+                        <li>
+              <span class="fw-bold">25 a 30 porciones</span>: 80€
+            </li>
+          </ul>
+          <p>Escritura personalizada: +4€</p>
+        </Card>
+
+<!-- 
+        <Card title="Tres leches" src="/assets/img/tratadas/tres-leches.jpg">
           <p>
-            Suave y esponjosa, destaca por su color rojo intenso y su
-            característico sabor ligeramente a cacao, combinado con un toque de
-            vainilla, cubierta y rellena de un delicioso frosting de crema de
-            queso, que equilibra perfectamente la dulzura. Es una tarta que no
-            solo llama la atención por su color, sino que también te conquista
-            con cada bocado.
-          </p>
+           
+          </p> 
 
           <p>Tamaños disponibles:</p>
           <ul>
@@ -137,9 +134,31 @@ import Whatsapp from "../components/Whatsapp.astro";
               <span class="fw-bold">Grande</span> (20-22 cm): 10 a 12 porciones
             </li>
           </ul>
-        </Card-->
+        </Card> -->
 
-        <!--Card title="Carrow Cake" src="/assets/img/cakes2/red-velvet.jpg">
+
+        <Card title="Carrot Cake" src="/assets/img/tratadas/carrot-cake.jpg">
+         <p>Tamaños disponibles:</p>
+          <ul>
+            <li>
+              <span class="fw-bold">8 a 10 porciones</span>: 40€
+            </li>
+            <li>
+              <span class="fw-bold">12 a 15 porciones</span>: 52€
+            </li>
+            <li>
+              <span class="fw-bold">20 a 25 porciones</span>: 70€
+            </li>
+                        <li>
+              <span class="fw-bold">25 a 30 porciones</span>: 80€
+            </li>
+          </ul>
+          <p>Escritura personalizada: +4€</p>
+        </Card>
+
+
+<!-- 
+        <Card title="Vainilla y dulce de leche" src="/assets/img/tratadas/vainilla-y-dulce-de-leche.jpg">
           <p>
             Una deliciosa tarta de zanahoria, suave y esponjosa, con un toque
             especiado de canela y nuez moscada. Enriquecida con trocitos de nuez
@@ -158,7 +177,7 @@ import Whatsapp from "../components/Whatsapp.astro";
               <span class="fw-bold">Grande</span> (20-22 cm): 10 a 12 porciones
             </li>
           </ul>
-        </Card-->
+        </Card> -->
 
         <!-- <Card title="Brownie" src="/assets/img/selected-cakes/brownie.jpg">
           <p>
@@ -169,7 +188,7 @@ import Whatsapp from "../components/Whatsapp.astro";
           <p><span class="fw-bold">Precio</span>: 30€ (20cm de diámetro)</p>
         </Card> -->
 
-        <Card
+        <!-- <Card
           title="Cheescake de frutos rojos"
           src="/assets/img/selected-cakes/frutos-rojos.jpg"
         >
@@ -182,9 +201,9 @@ import Whatsapp from "../components/Whatsapp.astro";
             <li>28€ (20cm de diámetro, 8-10 porciones)</li>
             <li>35€ (23cm de diámetro, 10-12 porciones)</li>
           </ul>
-        </Card>
+        </Card> -->
 
-         <Card
+         <!-- <Card
           title="Cheescake de lotus"
           src="/assets/img/selected-cakes/lotus-cheescake.jpg"
         >
@@ -197,16 +216,12 @@ import Whatsapp from "../components/Whatsapp.astro";
             <li>28€ (20cm de diámetro, 8-10 porciones)</li>
             <li>35€ (23cm de diámetro, 10-12 porciones)</li>
           </ul>
+        </Card> -->
 
-
-        </Card>
-
-
-                 <Card
+                 <!-- <Card
           title="Chocolate"
           src="/assets/img/selected-cakes/chocolate.jpg"
         >
-
           <p>
           Tres capas de húmedo y tierno bizcocho de chocolate. Relleno de ganache de chocolate con leche.
           </p>
@@ -215,9 +230,9 @@ import Whatsapp from "../components/Whatsapp.astro";
             <li>40€ (20cm de diámetro, 10-12 porciones)</li>
             <li>48€ (23cm de diámetro, 12-15 porciones)</li>
           </ul>
-        </Card>
+        </Card> -->
 
-
+<!-- 
                         <Card
           title="Dulce de leche"
           src="/assets/img/selected-cakes/dulce-de-leche.jpg"
@@ -230,18 +245,64 @@ import Whatsapp from "../components/Whatsapp.astro";
           <ul>
             <li>38€ (20cm de diámetro, 10-12 porciones)</li>
             <li>45€ (23cm de diámetro, 12-15 porciones)</li>
-          </ul>        </Card>
+          </ul>        
+        </Card> -->
 
-                            <Card
-          title="Carrot Cake"
-          src="/assets/img/selected-cakes/carrot-cake.jpg"
+                    
+
+<!-- 
+            <Card
+          title="Tarta de dos pisos"
+          src="/assets/img/tratadas/tarta-dos-pisos.jpg"
         >
-          <p>
-            Una deliciosa tarta de zanahoria, suave y esponjosa, con un toque
-            especiado de canela y nuez moscada. Enriquecida con trocitos de nuez
-            y un irresistible frosting de queso crema, ideal para los amantes de
-            los sabores caseros.
-          </p>
+   
+          
+          <p>Precios:</p>
+          <ul>
+            <li>40€ (20cm de diámetro, 10-12 porciones)</li>
+            <li>48€ (23cm de diámetro, 12-15 porciones)</li>
+          </ul> 
+        </Card> -->
+
+         <Card
+          title="Tarta de queso"
+          src="/assets/img/tratadas/tarta-de-queso.jpg"
+        >
+         <p>Tamaños disponibles:</p>
+          <ul >
+            <li>
+              <span class="fw-bold">6 a 8 porciones</span>: 24€
+            </li>
+            <li>
+              <span class="fw-bold">8 a 10 porciones</span>: 30€
+            </li>
+            <li>
+              <span class="fw-bold">12 a 14 porciones</span>: 40€
+            </li>
+          </ul>
+        </Card>
+
+<!-- 
+         <Card
+          title="Tarta de números"
+          src="/assets/img/tratadas/tarta-numeros.jpg"
+        >
+ 
+          
+          <p>Precios:</p>
+          <ul>
+            <li>40€ (20cm de diámetro, 10-12 porciones)</li>
+            <li>48€ (23cm de diámetro, 12-15 porciones)</li>
+          </ul> 
+        </Card> -->
+
+         <Card
+          title="Tarta sacher"
+          src="/assets/img/tratadas/tarta-sacher.jpg"
+        >
+          <!-- <p>
+            
+          </p> -->
           
           <p>Precios:</p>
           <ul>
@@ -252,7 +313,7 @@ import Whatsapp from "../components/Whatsapp.astro";
 
         <!-- <Card
           title="Cheescake de frutos rojos"
-          src="/assets/img/selected-cakes/red-velvet.jpg"
+          src="/assets/img/selected-cakes/frutos-rojos.jpg"
         >
           <p>
             Una tarta fresca y cremosa que combina la suavidad del queso con una
@@ -264,7 +325,7 @@ import Whatsapp from "../components/Whatsapp.astro";
          <p><span class="fw-bold">Precio</span>: 35€ (20cm de diámetro)</p>
 
         </Card> -->
-
+<!-- 
         <Card
           title="Cookie chispas de chocolate"
           src="/assets/img/selected-cakes/cookie-chispas-chocolate.jpg"
@@ -276,8 +337,8 @@ import Whatsapp from "../components/Whatsapp.astro";
             antojó? ¡Ordénala ahora y consiéntete! 💛✨
           </p>
           <p><span class="fw-bold">Precio</span>: 15€ (6 cookies)</p>
-        </Card>
-
+        </Card> -->
+<!-- 
         <Card
           title="Cookie de chocolate"
           src="/assets/img/selected-cakes/cookie-tres-chocolates.jpg"
@@ -289,7 +350,7 @@ import Whatsapp from "../components/Whatsapp.astro";
             antojó? ¡Pide la tuya ahora y disfruta! 🚀💛
           </p>
           <p><span class="fw-bold">Precio</span>: 15€ (6 cookies)</p>
-        </Card>
+        </Card> -->
 
         
 
@@ -317,6 +378,10 @@ import Whatsapp from "../components/Whatsapp.astro";
          <p><span class="fw-bold">Precio</span>: 15€ (6 cookies)</p>
 
         </Card> -->
+<a class="otros-pasteles" href="/pasteles-personalizados">
+  <Card title="Otros pasteles"  src="/assets/img/tratadas/personalizadas.jpg"/>
+</a>
+
 
         <!-- <Card title="Encebollado" src="/assets/img/encebollado.jpg" /> -->
       </div>
@@ -333,29 +398,8 @@ import Whatsapp from "../components/Whatsapp.astro";
 </Layout>
 
 <style>
-  .page-title {
-    font-size: 5rem;
-    color: #e78493;
-    line-height: 3rem;
-  }
-  .myrow {
-    display: grid;
-    /* flex-wrap: wrap; */
-    /* justify-content: start; */
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    @media (max-width: 770px) {
-      grid-template-columns: 1fr 1fr;
-    }
-    @media (max-width: 470px) {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .otros-pasteles{
+    text-decoration: none;
   }
 </style>
 
