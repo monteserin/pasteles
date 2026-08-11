@@ -2,9 +2,10 @@
 interface Props {
   title: string;
   src: string;
+  nodescription:string
 }
 
-const { title, src } = Astro.props;
+const { title, src, nodescription } = Astro.props;
 ---
 
 <style>
@@ -73,7 +74,7 @@ const { title, src } = Astro.props;
   }
 </style>
 
-<div class="monteserinCake" style={`background-image: url(${src});`}>
+<div class="monteserinCake {nodescription && 'nodescription'}" style={`background-image: url(${src});`}>
   <div class="border">
     <h3 class="text-center card-title">{title}</h3>
 
