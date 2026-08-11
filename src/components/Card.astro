@@ -74,7 +74,7 @@ const { title, src, nodescription } = Astro.props;
   }
 </style>
 
-<div class="monteserinCake {nodescription && 'nodescription'}" style={`background-image: url(${src});`}>
+<div class:list={["monteserinCake", { nodescription }]} style={`background-image: url(${src});`}>
   <div class="border">
     <h3 class="text-center card-title">{title}</h3>
 
