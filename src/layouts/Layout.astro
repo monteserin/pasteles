@@ -61,7 +61,9 @@ import Whatsapp from "../components/Whatsapp.astro";
 
     <div class="container">
       <div class="delivery-calculator">
-        <p class="fw-bold">Calcula el precio de tu entrega</p>
+        <p ><span class="fw-bold">Calcula el precio de tu entrega a domicilio</span> (8 euros más 0.7 euros por kilómetro)</p>
+
+
         <div class="delivery-calculator-form">
           <div class="delivery-address-wrap">
             <input
@@ -361,11 +363,22 @@ import Whatsapp from "../components/Whatsapp.astro";
     @media (max-width: 770px) {
       grid-template-columns: 1fr;
     }
+
     img{
       max-width: 100%;
       border-radius: 15px;
     }
   }
+
+      @media (max-width: 610px){
+      header{
+        flex-direction: column;
+        p{
+          margin-bottom: 0;
+          margin-top: 15px;
+        }
+      }
+    }
 
   .fw-bold{
     font-weight: bold;
